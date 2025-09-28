@@ -1,0 +1,101 @@
+{
+  "info": {
+    "_postman_id": "foodtally-api-collection-2025",
+    "name": "FoodTally API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for FoodTally API endpoints."
+  },
+  "item": [
+    {
+      "name": "Create Food",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Apple\",\n  \"caloriesPerServing\": 52\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/food", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "food"] }
+      }
+    },
+    {
+      "name": "Update Food",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Banana\",\n  \"caloriesPerServing\": 89\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/food/{{foodId}}", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "food", "{{foodId}}"] }
+      }
+    },
+    {
+      "name": "Get All Foods",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/food", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "food"] }
+      }
+    },
+    {
+      "name": "Get Food By Id",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/food/{{foodId}}", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "food", "{{foodId}}"] }
+      }
+    },
+    {
+      "name": "Create Intake Entry",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user1\",\n  \"foodName\": \"Apple\",\n  \"calories\": 52,\n  \"date\": \"2025-09-28\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/intake", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "intake"] }
+      }
+    },
+    {
+      "name": "Update Intake Entry",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user1\",\n  \"foodName\": \"Banana\",\n  \"calories\": 89,\n  \"date\": \"2025-09-28\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/intake/{{intakeId}}", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "intake", "{{intakeId}}"] }
+      }
+    },
+    {
+      "name": "Get Intake Entry By Id",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/api/intake/{{intakeId}}", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "intake", "{{intakeId}}"] }
+      }
+    },
+    {
+      "name": "Add Weight Log",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"user1\",\n  \"weight\": 70.5,\n  \"date\": \"2025-09-28\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/api/weight", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "weight"] }
+      }
+    }
+  ]
+}

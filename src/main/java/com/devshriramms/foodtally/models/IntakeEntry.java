@@ -18,7 +18,6 @@ public class IntakeEntry {
     String userId;
     String foodName;
     Food food;
-    FoodCategory category;
     Meal meal;
     int calories;
     LocalDate date;

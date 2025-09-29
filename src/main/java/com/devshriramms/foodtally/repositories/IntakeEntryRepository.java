@@ -11,4 +11,6 @@ public interface IntakeEntryRepository extends MongoRepository<IntakeEntry, Stri
     List<IntakeEntry> findByUserIdAndDate(String userId, LocalDate date);
 
     List<IntakeEntry> findByUserId(String userId);
+
+    List<IntakeEntry> findByUserIdAndDateBetween(String userId, LocalDate start, LocalDate end);
 }
